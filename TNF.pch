@@ -1,0 +1,157 @@
+//
+//  PrefixHeader.pch
+//  TNF
+//
+//  Created by 刘翔 on 15/12/15.
+//  Copyright © 2015年 刘翔. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
+#import "TabBarItem.h"
+#import "UIImageView+WebCache.h"
+#import "AFNetworking.h"
+//颜色类
+#import "MyColor.h" // UIColor *color = [MyColor colorWithHexString:@"#0172fe"];
+
+#import "UIViewExt.h"
+#import "UIView+ViewController.h"
+#import "WXLabel.h"
+#import "UIViewController+HUD.h"
+#import "Header.h"
+#import "JSONKit.h"
+#import "WXDataService.h"
+#import "MBProgressHUD.h"
+#import "MBProgressHUD+Add.h"
+#import "LXSgement.h"
+#import "MJRefresh.h"
+#import "LCDownloadManager.h"
+#import "RecoderView.h"
+#import "NetWorkManager.h"
+
+//微信
+#define WXAppID @"wx48a3a9ec633ccb96"
+#define WXAppSecret @"97d3530f543547aa305e59ac1c59c2c4"
+
+
+#define  YOUPAINOTICE         @"youpainotice"      //消息推送
+
+
+//本地
+#define ISLogin @"ISLogin"
+#define Userid @"userid"
+#define Nickname @"nickname"//微信名字
+#define IcanUrl @"headimgurl"//微信头像
+#define subject @"subject" //APP考试科目 1托福 2雅思
+#define app_ex_time @"app_ex_time" //APP考试时间
+#define app_t_score @"app_t_score" //APP目标分数
+#define Useramount  @"Useramount" // APP福币
+#define Username @"Username" //姓名
+#define mobile1 @"mobile" //电话
+#define weixin1  @"weixin" // 微信号
+#define timepickline @"timepickline"//时间选择器选择的行数
+#define sorceAA  @"sorceAA"// 选择的分数button键
+
+
+//通知
+#define Noti_Dismiss  @"Noti_Dismiss"   //微信登录成功发送通知
+#define Noti_LoginOut  @"Noti_LoginOut"   //登出
+#define Noti_VideoDonghua @"Noti_VideoDonghua"  //视频动画
+#define Noti_tiaozhuan  @"Noti_tiaozhuan"
+
+// --------- 接口 ------------------
+#define MAINURL @"http://m.tuoninfu.com/WebService/100000?AppID=wx48a3a9ec633ccb96&AppSecret=97d3530f543547aa305e59ac1c59c2c4&op="   //主URL
+
+#define Url_Login            MAINURL@"wechatLogin"     //登录
+#define Url_getVideoList     MAINURL@"getVideoList"   //更多课程列表
+#define Url_getLectureList   MAINURL@"getLectureList" //讲座列表
+#define Url_getLectureCont   MAINURL@"getLectureCont" //讲座详情
+#define Url_getVideoCont     MAINURL@"getVideoCont"   //课程内容详情
+#define Url_getUpdateSetting MAINURL@"getUpdateSetting"//个人信息
+#define Url_setSettingField  MAINURL@"setSettingField"//提交个人信息
+#define Url_getGaveTeacher   MAINURL@"getGaveTeacher"  //获取打赏老师福币
+#define Url_setGaveTeacher   MAINURL@"setGaveTeacher"  //打赏老师
+#define Url_setGaveTeacherMP3   MAINURL@"setGaveTeacherMp3" //详情打赏老师
+#define Url_signUpLecture    MAINURL@"signUpLecture"    //讲座报名
+#define Url_getMyAmount      MAINURL@"getMyAmount"  //我的福币
+#define Url_getSetting       MAINURL@"getSetting"   //获取设置信息
+#define Url_getSubject       MAINURL@"getSubject"      //
+#define Url_setSubject       MAINURL@"setSubject"        //传值
+#define Url_getStudentHome   MAINURL@"getStudentHome"  //首页
+#define Url_getVideoCont     MAINURL@"getVideoCont"   //视频课程内容
+#define Url_unlockVideo      MAINURL@"unlockVideo"    //解锁视频
+#define Url_myCourseList     MAINURL@"myCourseList"   //我的课程列表
+#define Url_delCourse        MAINURL@"delCourse"      // 删除课程
+#define Url_setAmount        MAINURL@"setAmount"//领取福币
+
+#define Url_getMyAmount        MAINURL@"getMyAmount"//分享接口
+#define Url_setAmountShare        MAINURL@"setAmountShare"//分享之后领取福币
+
+#define Url_oralPractice     MAINURL@"oralPractice" //口语练习
+#define Url_getPracticeList1            MAINURL@"getPracticeList1" //机经预测列表
+#define Url_getPracticeLog              MAINURL@"getPracticeLog"  //练习记录
+#define Url_getVideoContPracticeList    MAINURL@"getVideoContPracticeList" //视频课程内容-练习题
+#define Url_getPracticeList1            MAINURL@"getPracticeList1" //机经预测列表
+#define Url_getPracticeList1Subject            MAINURL@"getPracticeList1Subject" //机经预测题目列表
+#define Url_getPracticeList2            MAINURL@"getPracticeList2" //分类练习列表
+#define Url_getPracticeList2Subject            MAINURL@"getPracticeList2Subject" //分类练习题目列表
+#define Url_getPracticeList3            MAINURL@"getPracticeList3" //TPO真题列表
+
+#define Url_getSubjectInfo            MAINURL@"getSubjectInfo" //题目详情
+#define Url_uploadMp3Info            MAINURL@"uploadMp3Info" //上传录音
+#define Url_uploadImgApp            @"http://m.tuoninfu.com/index.php?m=Api&c=Upload&a=uploadImgApp" //上传文件
+
+#define Url_getAmountUploadMp3Info   MAINURL@"getAmountUploadMp3Info" //上传录音前确认用户福币数
+#define Url_mp3Details   MAINURL@"mp3Details" //好声音详情
+
+
+#define Url_mp3CommentSave   MAINURL@"mp3CommentSave" //学生追问与老师回
+
+#define Url_delCourseViedo     MAINURL@"delCourseViedo"   //删除已下载课程视频
+
+#define Url_getAmountLog      MAINURL@"getAmountLog"  //福币账单
+#define Url_getJoinUs         MAINURL@"getJoinUs"     //加入我们
+#define Url_getAgreement      MAINURL@"getAgreement"  //协议与条款
+#define Url_feedback          MAINURL@"feedback"      //意见反馈
+#define Url_downloadCourseViedo    MAINURL@"downloadCourseViedo" //视频下载
+#define Url_collectionCourse    MAINURL@"collectionCourse"   //收藏课程与讲座
+#define Url_weakLabelCont     MAINURL@"weakLabelCont"  // 弱点标签内容
+#define Url_getFileContent    MAINURL@"getFileContent"  //相关素材详情
+#define Url_studentLogin      MAINURL@"studentLogin"  //帐号登录--学生版
+#define Url_getZhiboList      MAINURL@"getZhiboList"    //直播列表
+
+#define Url_getZhiboIsCollection  MAINURL@"getZhiboIsCollection"  //获取直播课是否已收藏
+#define Url_collectionZhiboCourse MAINURL@"collectionZhiboCourse"  //收藏直播课
+//取消nslog打印信息
+#define IS_ENABLE_DEBUG_LOG  1
+#if IS_ENABLE_DEBUG_LOG
+
+#define NSLog(...) NSLog(__VA_ARGS__)
+
+#else
+
+#define NSLog(...) {}
+
+#endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
